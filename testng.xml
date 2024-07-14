@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OrangHRM">
+    <listeners>
+        <listener class-name="listeners.Listener"/>
+    </listeners>
+    <test name="Check Login With Valid Email and Password">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testcases.LoginTest">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Add Admin User">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="testcases.AddAdminTest">
+                <methods>
+                    <include name="AddAdminWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Leave">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="testcases.LeaveTest">
+                <methods>
+                    <include name="CheckLeaveText_ISVisiable_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Add PIM User">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testcases.AddPIMUserTest">
+                <methods>
+                    <include name="addPIMUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Check navigate to recruitment">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testcases.RecruitmentTest">
+                <methods>
+                    <include name="navigate_to_recruitment_page_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
